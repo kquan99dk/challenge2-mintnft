@@ -1,4 +1,3 @@
-
 use crate::*;
 use near_sdk::{CryptoHash};
 use std::mem::size_of;

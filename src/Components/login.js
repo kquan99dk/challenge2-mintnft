@@ -6,10 +6,10 @@ const Login = (props) => {
       <div className="d-flex justify-content-center" style={{ minWidth: '400px',width: '400px', height: '400px', borderRadius: '50%', overflow: 'hidden' }}>
         <img style={{ height: '100%' }} src="https://bafkreifyhyl36tjrmt3752piu75ajgifju52qck67xis73il26gi2y7g7u.ipfs.nftstorage.link/" />
       </div>
-      <div className="flex-grow-1 ms-3 d-flex flex-column justify-content-center">
-        <p style={{ fontSize: '30px', fontWeight:'900' }}>What is CryptoKitties?</p>
+      <div className="flex-grow-1 ms-3 d-flex flex-column justify-content-center align-items-center">
+        <p style={{ fontSize: '30px', fontWeight:'900' }}>Mint NFT Cat </p>
         <p style={{ fontSize: '20px', marginBottom: '0' }}>
-          CryptoKitties is a game centered around breedable, collectible, and oh-so-adorable creatures we call CryptoKitties! Each cat is one-of-a-kind and 100% owned by you; it cannot be replicated, taken away, or destroyed.
+          Mint now.
         </p>
       </div>
     </div>

@@ -23,25 +23,26 @@ export default function App() {
     const receivedNFT = async () => {
       if (window.accountId !== "") {
         setuserHasNFT(
-          false
+          await window.contract.nft_token({
+            token_id: `${window.accountId}-nftcat`
+          })
         );
       }
     };
     receivedNFT();
   }, []);
-
   return (
-    <div style={{ backgroundImage: 'url("https://www.cryptokitties.co/images/pattern-tile.svg")', backgroundSize:'44rem auto' }}>
-      <div style={{ padding: '10px', textAlign: 'right', backgroundColor: 'rgb(214 229 222 / 47%)'}}
+    <div style={{ backgroundImage: 'url("https://www.cryptokitties.co/images/pattern-tile.svg")', backgroundSize: '44rem auto' }}>
+      <div style={{ padding: '10px', textAlign: 'right', backgroundColor: 'rgb(214 229 222 / 47%)' }}
       >
-        <span style={{cursor: 'pointer'}} onClick={window.walletConnection.isSignedIn() ? logout : login}>
+        <span style={{ cursor: 'pointer' }} onClick={window.walletConnection.isSignedIn() ? logout : login}>
           {window.walletConnection.isSignedIn()
-          ? "Sign out"
-          : "Login"}
+            ? "Sign out"
+            : "Login"}
         </span>
-        
+
       </div>
-      <div className="d-flex justify-content-center align-items-center" style={{  height: 'calc(100vh - 44px)' }}>
+      <div className="d-flex justify-content-center align-items-center" style={{ height: 'calc(100vh - 44px)' }}>
         {!window.walletConnection.isSignedIn()
           ?
           <Login />
