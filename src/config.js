@@ -1,4 +1,4 @@
-const CONTRACT_NAME = 'mintnftnnear.thuyngocftu.testnet'
+const CONTRACT_NAME = 'mintnftnear.thuyngocftu.testnet'
 
 function getConfig(env) {
   switch (env) {
